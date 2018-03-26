@@ -1,4 +1,4 @@
-/**
+﻿/**
  *  Duckuino, an open source project licenced under MIT License
  *  GitHub repo can be found at the following link:
  *    - https://github.com/Nurrl/Duckuino
@@ -30,7 +30,7 @@ class Duckuino {
   listModules() {
     /* List all modules in the moduleList file */
     if (!this.moduleArray) {
-      this.moduleArray = getFile("modules/modules").split('\n');
+      this.moduleArray = getFile("modules/modules").replace('\r', '').split('\n');
       this.moduleArray.pop();
     }
 
